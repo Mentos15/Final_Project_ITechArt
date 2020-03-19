@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block serch_panel %}
+     {% if forms2 %}
+                <div class="SearchPanel" >
+                     <form method="get" action="">
+                         {{ forms2 }}
+                         <button class="search_button" type="submit">Поиск</button>
+                     </form>
+                 </div>
+            {% endif %}
+{% endblock %}
+
+
+{% block name_conf %}
+
+{% for i in page_obj %}
+    <div id="conf" class="conference">
+        <h3 class="conf_name">{{ i.name}}</h3><img src="http://127.0.0.1:8000/{{ i.img }}"><br>
+        <a class="more_info" href="{% url 'catalog:More_info' i.id %}">Подробнее</a><br><span class="date">{{i.date_published }}</span><br>
+    </div>
+{% endfor %}
+
+<nav id="pagin">
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+</nav>
+{% endblock %}

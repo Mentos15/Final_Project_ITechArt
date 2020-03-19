@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block info %}
+<div class="information">
+ {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="login_error">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% if more_info %}
+        <h1 class="conf_name">{{ more_info.name }}</h1>
+        <div class="detail_info">{{ more_info.text }}</div>
+    {% endif %}
+    <br><div class="record"><a href="{% url 'catalog:register_on_confirence' more_info.id %}">Записаться на конференцию</a></div>
+</div>
+{% endblock %}

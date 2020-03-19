@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration:none;
+    color: white;
+}
+
+body{
+    background-image: url("/static/images/main_back.jpg");
+    background-repeat: no-repeat;
+}
+.main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    background-color:  rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    flex: 10%
+}
+
+.content{
+    display: flex;
+    flex: 90%;
+
+}
+
+.record{
+    cursor: pointer;
+    width: 400px;
+    padding: 15px 5px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background: #3da35a;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(56,100,38);
+    transition: all 1s;
+    text-align: center;
+    margin: auto;
+
+
+}
+.record:hover {
+  box-shadow: 0 0 25px rgb(56,100,255);
+}
+.record:focus {
+  outline: none;
+}
+
+.sign-in {
+    height: 30px;
+    width: 60px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 3em;
+    text-align: center;
+    line-height: 29px;
+    margin-right: 5px;
+}
+.sign-in:hover {
+    background-color: rgba(132, 245, 228, 0.5);
+    cursor: pointer;
+}
+.aunteficate{
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.SearchPanel{
+    width: 10vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+
+.SearchPanel ul {
+    font-size: 20px;
+}
+
+.SearchPanel ul li {
+    border-bottom: 10px solid transparent;
+    border-top:10px solid transparent;
+}
+
+.SearchPanel ul li a {
+  display: table-cell;
+  height: 50px;
+  vertical-align: middle;
+}
+.account{
+    margin-right: 10px;
+}
+.sign-up {
+    border: 2px solid rgb(255, 255, 255);
+    height: 30px;
+    width: 110px;
+    margin: 0 10px 0 5px;
+    border-radius: 3em;
+    text-align: center;
+    line-height: 29px;
+
+}
+
+.sign-up:hover {
+    background-color: rgba(132, 245, 228, 0.5);
+    cursor: pointer;
+}
+.searc{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: aqua;
+  border-radius: 6px;
+  background: aqua;
+  transition: 0.2s;
+}
+
+a.more_info{
+    color: brown;
+}
+
+a.page-link:hover {
+    background-color: cadetblue;
+    color: black;
+    ;
+}
+a.page-link:hover {
+    background-color: cadetblue;
+    color: black;
+}
+
+.page-link{
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
+
+.page-link{
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
+
+.conference{
+font-size: 30px;
+
+}
+.all_conference{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+.pagination{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 5px;
+
+}
+h1.conf_name{
+    padding-left: 45%;
+    color: gold;
+}
+.detail_info{
+    color: cadetblue;
+}
+a.record{
+    color:black;
+}
+img{
+    width: 900px;
+    height: 500px;
+}
+h3.conf_name{
+    color: gold;
+}
+.date{
+    color: white;
+}
+.current{
+    color: white;
+}
+.main-word{
+    text-align: center;
+    line-height: 45px;
+    width: 100px;
+
+}
+li{
+    list-style-type: none;
+}
+.information{
+    width: 100vw;
+}
+.activate{
+    font-size: 50px;
+    color:white;
+    width: 100vw;
+    text-align: center;
+    margin-left: 22%;
+
+}
+img.act{
+    margin-top: 100px;
+    height: 300px;
+}
+

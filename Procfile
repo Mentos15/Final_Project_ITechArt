@@ -1,0 +1,1 @@
+web: gunicorc Catalog_Confirance.wsgi --log-file -

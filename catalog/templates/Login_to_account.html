@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+     {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="login_error">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    <div class="login_conteiner">
+        <form method="post" class="login">
+            {% csrf_token %}
+            {{ login_forms }}
+            <button type="submit" class="enter">Login</button>
+        </form>
+    </div>
+{% endblock %}

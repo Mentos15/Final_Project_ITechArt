@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{#<script type="text/javascript">#}
+{#        function ajaxPagination(){#}
+{#            $('#pagin a.page-link').each((index,el)=>{#}
+{#                $(el).click((e) =>{#}
+{#                    e.preventDefault()#}
+{#                    let page_url = $(el).attr('href')#}
+{##}
+{#                    $.ajax({#}
+{#                        url:page_url,#}
+{#                        type: 'GET',#}
+{#                        succsess: (data) => {#}
+{#                            $('#conf').empty()#}
+{#                            $('#conf').append($(data).filter('#conf').html())#}
+{##}
+{#                            $('#pagin').empty()#}
+{#                            $('#pagin').append($(data).find('#pagin').html)#}
+{#                        }#}
+{#                    })#}
+{#                })#}
+{#            })#}
+{#        }#}
+{#        $(document).ready( function () {#}
+{#            ajaxPagination()#}
+{#            })#}
+{#        $(document).ajaxStop(function () {#}
+{#            ajaxPagination()#}
+{#        })#}
+{#    </script>#}
+</head>
+<body >
+<div class="main">
+<header>
+<div class="main-word"><a  href="{% url 'catalog:Confirences' %}">Главная</a></div>
+<div class="aunteficate">
+{%  if not user.is_authenticated %}
+    {% block register %}<div  class="sign-up"><a href="{%url 'catalog:register_user'%}">Регистрация</a></div>{% endblock %}
+    {% block login %}<div class="sign-in"><a  href="{% url 'catalog:login' %}">Войти</a></div>{% endblock %}
+    {% else %}
+        {% block profile%}
+            <div class="account">
+                <div class="username">{{ user.username }}<a href='{% url 'catalog:logout' %}'> / Выйти</a></div>
+                <div class="change-password"><a href="{% url 'catalog:change_password' %}">Сменить пароль</a></div>
+            </div>
+        {% endblock %}
+{% endif %}
+   </div>
+</header>
+
+
+  <div class="content">
+  {% block activate %}
+
+  {% endblock %}
+    {% block serch_panel %}
+
+    {% endblock %}
+  <div>
+    {% block info %}
+
+    {% endblock %}
+  </div>
+
+<div class="all_conference">
+    {% block name_conf %}
+
+    {% endblock %}
+</div>
+
+    {% block text %}
+
+    {% endblock %}
+    </div>
+
+{% block body %}
+
+{% endblock %}
+{% block js %}
+
+
+{% endblock %}
+</div>
+</body>
+</html>
